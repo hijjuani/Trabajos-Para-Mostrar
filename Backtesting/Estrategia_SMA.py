@@ -3,6 +3,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+"""
+Aquí se cargan los periodos de las medias móviles obtenidas en:
+Mejor_Combinación_SMA.py
+"""
+
 ticker = "EWZ"
 sma_long_period = 90
 sma_short_period = 30
@@ -102,4 +108,5 @@ print("Rendimiento total (Estrategia):", round(total_return_strategy*100,2), "%"
 print("Volatilidad (Buy & Hold):", round(volatility_asset*100,2), "%")
 print("Volatilidad (Estrategia):", round(volatility_strategy*100,2), "%")
 print("Sharpe Ratio (Buy & Hold):", round(sharpe_asset,2))
+
 print("Sharpe Ratio (Estrategia):", round(sharpe_strategy,2))
