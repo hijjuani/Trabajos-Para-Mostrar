@@ -6,6 +6,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import nltk
 
+"""
+Monitoréa el sentimiento de un activo basado en búsquedas de google, con keywords a elección.
+"""
+
 # === CONFIGURACIÓN ===
 API_KEY = "26d19361916f459eac75c6d0abe21104"
 KEYWORDS = ["GOOGL stock", "GOOGL", "Alphabet results", "Alphabet earnings", "GOOGL price"]
@@ -184,3 +188,4 @@ for i, (val, kw) in enumerate(zip(sent_por_kw["sentimiento"], sent_por_kw["keywo
 # --- Ajuste de márgenes generales ---
 plt.tight_layout(rect=[0, 0, 1, 0.92], h_pad=2.0, w_pad=2.5)
 plt.show()
+
