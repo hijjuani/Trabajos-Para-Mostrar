@@ -2,8 +2,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-df = pd.read_excel("BigMac/BigMac.xlsx")
 
+"""
+Evalúa si el precio del dolar está o no sobrevaluado según el índice BigMac, creado por The Economist en 1986.
+El índice estima el valor de la hamburguesa de McDonnald's, "Big Mac", en distintos países.
+"""
+
+df = pd.read_excel("BigMac/BigMac.xlsx")
 
 df["Dolar_BigMac_Teoric"] = df["Price_ARS"] / df["Price_USA"]
 df["Brecha"] = (df["Dolar_Blue"] *100 / df["Dolar_BigMac_Teoric"]) - 100
@@ -78,4 +83,5 @@ fig.text(0.99, 0.01, "Juani © 2025",
 
 
 plt.tight_layout()
+
 plt.show()
