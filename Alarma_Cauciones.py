@@ -4,6 +4,11 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import time, threading, re, winsound
 
+"""
+Avisa cuando la tasa de cauciones supera un cierto umbral (target),
+tomando los datos de la tasa desde InvertirOnline con Selenium.
+"""
+
 # ---------------- CONFIG ----------------
 TARGET_ARS = 50.0
 TARGET_USD = 1.4
@@ -160,3 +165,4 @@ def update_loop():
 
 threading.Thread(target=update_loop, daemon=True).start()
 root.mainloop()
+
