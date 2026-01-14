@@ -2,6 +2,13 @@ from scipy.optimize import linprog
 import matplotlib.pyplot as plt
 import yfinance as yf
 
+"""
+- DESCRIPCIÓN -
+Distribuye el monto a invertir según el porcentaje que se quiera asignar a cada activo.
+Funciona ingresando un monto máximo de inversión.
+Luego se especifica el ticker con sus respectivos porcentajes mínimos y máximos deseados en cartera.
+"""
+
 print("------- Método Simplex -------")
 
 def resolver_lp(c, A_eq=None, b_eq=None, A_ub=None, b_ub=None, bounds=None, tipo="min", tickers=[]):
@@ -107,4 +114,5 @@ bounds = [(m, None) for m in mins]
 
 
 # Llamar a la función para resolver el problema
+
 resolver_lp(c, A_eq, b_eq, A_ub, b_ub, bounds, tipo="max", tickers = tickers)
