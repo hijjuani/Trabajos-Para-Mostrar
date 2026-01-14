@@ -5,10 +5,13 @@ import timesfm
 import yfinance as yf
 import pandas as pd
 
-"""***********"""
+"""***********
+
 - DESCRIPCIÓN -
-Utiliza TimesFM para predecir el precio de un activo.
-"""**********"""
+
+Utiliza la librería TimesFM para predecir el precio de un activo.
+
+**********"""
 
 # ---------------------------
 # 1) Descargar datos
@@ -97,4 +100,5 @@ plt.plot(data_2["Date"], data_2["EMA200"], label="EMA 200", color="blue", linewi
 plt.legend()
 plt.grid(alpha=0.3)
 plt.show()
+
 
